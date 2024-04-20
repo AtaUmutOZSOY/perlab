@@ -26,6 +26,8 @@ import { EventRoutingModule } from './modules/event/event-routing.module';
 import { ProjectRoutingModule } from './modules/project/project-routing.module';
 import { PublicationRoutingModule } from './modules/publication/publication-routing.module';
 import { TeamRoutingModule } from './modules/team/team-routing.module';
+import { HomeRoutingModule } from './modules/home/home-routing.module';
+import { HomeModule } from './modules/home/home.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,6 +37,8 @@ import { TeamRoutingModule } from './modules/team/team-routing.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HomeRoutingModule,
+    HomeModule,
     AdminRoutingModule,
     AnnouncementRoutingModule,
     AuthRoutingModule,
@@ -62,6 +66,7 @@ import { TeamRoutingModule } from './modules/team/team-routing.module';
       progressAnimation: 'increasing',
       preventDuplicates: true,
     }),
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

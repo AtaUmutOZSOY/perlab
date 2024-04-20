@@ -11,4 +11,4 @@ import { EventRoutingModule } from './event-routing.module';
     EventRoutingModule
   ]
 })
-export class EventModule { }
+export class EventModule  { }

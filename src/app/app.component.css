@@ -1,0 +1,33 @@
+.navbar {
+    box-shadow: 0 4px 6px rgba(0,0,0,.1); /* Navbar'a hafif bir gölge ekler */
+  }
+  
+  .header-text > div {
+    text-align: center; /* Metinleri merkeze alır */
+  }
+  
+  .header-text hr {
+    margin: 0.5rem auto; /* Çizginin üst ve alt boşluklarını ayarlar */
+    width: 90%; /* Çizginin genişliğini ayarlar */
+  }
+  .brand-bold {
+    font-weight: bold; /* Yazıyı kalın yapar */
+  }
+  
+  .text-smaller {
+    font-size: 0.8rem; /* Yazının boyutunu küçültür */
+  }
+  
+  footer {
+    background-color: #343a40; /* Bootstrap karanlık gri renk */
+    color: white;
+  }
+  
+  footer a {
+    color: white; /* Bağlantılar için beyaz renk */
+  }
+  
+  footer a:hover {
+    color: #ccc; /* Bağlantı üzerine gelindiğinde renk */
+  }
+  
