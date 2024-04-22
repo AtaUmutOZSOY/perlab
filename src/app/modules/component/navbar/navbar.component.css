@@ -1,0 +1,35 @@
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: #333; /* Brand text color */
+  }
+  
+  .navbar-brand img {
+    margin-right: 10px; /* Adjust margin between logo and text */
+  }
+  
+  .brand-bold {
+    font-weight: bold;
+  }
+  
+  .text-smaller {
+    font-size: 14px;
+  }
+  
+  .navbar-nav .nav-link {
+    font-size: 16px; /* Nav links font size */
+    color: #333; /* Nav links text color */
+  }
+  
+  .navbar-nav .nav-link.active {
+    font-weight: bold; /* Active nav link font weight */
+  }
+  
+  .login-button {
+    background-color: #007bff; /* Login button background color */
+    color: white !important; /* Login button text color */
+    border-radius: 20px; /* Adjust button border radius */
+    padding: 8px 20px; /* Adjust button padding */
+  }
+  

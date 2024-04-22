@@ -1,0 +1,10 @@
+.container-fluid {
+    border: solid red 1rem;
+    padding: 0; /* Konteynırın iç kenar boşluğunu kaldırır */
+  }
+  
+  .container-fluid img {
+    width: 100%; /* Resmin konteynırın tam genişliğini kaplamasını sağlar */
+    height: auto; /* Oranları koruyarak resmin boyutunu otomatik olarak ayarlar */
+  }
+  
