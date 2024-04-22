@@ -1,0 +1,14 @@
+/* Main App Container Styling */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #f4f4f4;
+  }
+  
+  /* Content Styling */
+  .content {
+    flex: 1;
+    padding: 20px;
+  }
+  

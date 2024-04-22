@@ -1,1 +1,50 @@
-<app-hero></app-hero>
+<section class="hero">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h1 class="hero-title">Plant Evolution Research Laboratory</h1>
+          <a href="team" class="btn btn-primary">Discover Us</a>
+        </div>
+        <div class="col-lg-6">
+          <img src="assets/img/image_1.jpg" alt="Akademik Hero Görseli" class="img-fluid">
+        </div>
+      </div>
+    </div>
+</section>
+<section class="newsFeed">
+    <div class="container">
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="announcements-tab" data-bs-toggle="tab" href="#announcements" aria-controls="announcements" aria-selected="true">Announcements</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="events-tab" data-bs-toggle="tab" href="#events" aria-controls="events" aria-selected="false">Events</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane fade show active" id="announcements" role="tabpanel" aria-labelledby="announcements-tab">
+                <ul>
+                    <li *ngFor="let announcement of announcements" [value]="announcement.id">
+                        <p class="created-time">{{ announcement.createdTime | date:'dd/MM/yyyy' }}</p>
+                        <h5>{{ announcement.title }}</h5>
+                        <p>{{ announcement.description }}</p>
+                        <span *ngIf="announcement.isNew" class="new-badge">New</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="tab-pane fade" id="events" role="tabpanel" aria-labelledby="events-tab">
+                <ul>
+                    <li *ngFor="let event of events" [value]="event.id">
+                        <p class="created-time">{{ event.createdTime | date:'dd/MM/yyyy' }}</p>
+                        <h5>{{ event.title }}</h5>
+                        <p>{{ event.description }}</p>
+                        <a href="{{event.link}}">Event link</a>
+                        <p>Event Time: {{ event.eventTime | date:'dd/MM/yyyy' }}</p>
+                        <span *ngIf="event.isNew" class="new-badge">New</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

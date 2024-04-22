@@ -1,10 +1,94 @@
-.container-fluid {
-    border: solid red 1rem;
-    padding: 0; /* Konteynırın iç kenar boşluğunu kaldırır */
+/* Hero Section Styling */
+.hero {
+  background: url('/src/assets/img/image_1.jpg') no-repeat center center/cover;
+  color: #000000;
+  text-shadow: 2px 2px 4px #000;
+  margin-top: auto;
+  padding: 40px 0; /* Daha fazla iç boşluk ekledim */
+}
+
+.hero-title {
+  font-size: 48px;
+  animation: slideInFromLeft 1s ease-out;
+}
+
+.hero-subtitle {
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+.btn-primary {
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
+@keyframes slideInFromLeft {
+  0% {
+      transform: translateX(-100%);
+      opacity: 0;
   }
-  
-  .container-fluid img {
-    width: 100%; /* Resmin konteynırın tam genişliğini kaplamasını sağlar */
-    height: auto; /* Oranları koruyarak resmin boyutunu otomatik olarak ayarlar */
+  100% {
+      transform: translateX(0);
+      opacity: 1;
   }
-  
+}
+
+/* News Feed Section Styling */
+.newsFeed {
+  background-color: #f8f9fa;
+  padding: 40px 0; /* Ayarladığım padding değeri */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-tabs {
+  border-bottom: 2px solid #dee2e6;
+}
+
+.nav-link {
+  margin-right: 10px;
+  padding: 10px 20px;
+  font-weight: 500;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.nav-link.active, .nav-link:hover {
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+}
+
+.tab-content {
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #dee2e6;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  margin-bottom: 15px;
+}
+.new-badge {
+  display: inline-block;
+  padding: 3px 7px;
+  margin-left: 10px;
+  background-color: #28a745;
+  color: white;
+  font-size: 12px;
+  border-radius: 3px;
+}
+
+
+

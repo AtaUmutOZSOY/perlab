@@ -1,4 +1,18 @@
-<app-header></app-header>
-<app-navbar></app-navbar>
-<app-home></app-home>
-<router-outlet></router-outlet>
+<!-- App Component Main Container -->
+<div class="app-container">
+
+    <!-- Header Component -->
+    <app-header></app-header>
+  
+    <!-- Navbar Component -->
+    <app-navbar></app-navbar>
+  
+    <!-- Main Content Outlet -->
+    <!-- Router Outlet will inject respective component based on the route -->
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  
+    <app-footer></app-footer>
+  </div>
+  

@@ -1,38 +1,37 @@
 .custom-header {
-    background-color: #1d2f57;
-    color: white;
-    padding: 20px 0;
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .contact-info {
-    font-size: 16px;
-  }
-  
-  .contact-info .phone {
-    margin-left: 20px;
-  }
-  
-  .contact-link .btn-contact {
-    background-color: transparent;
-    border: 2px solid white;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-  }
-  
-  .contact-link .btn-contact:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-  
+  background-color: #1d2f57;
+  color: white;
+  padding: 10px 0; /* Padding değerini azalttım */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-info {
+  font-size: 16px;
+}
+
+.contact-info .phone {
+  margin-left: 20px;
+}
+
+.contact-link .btn-contact {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 5px 15px; /* Button padding değerini de azalttım */
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.contact-link .btn-contact:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}

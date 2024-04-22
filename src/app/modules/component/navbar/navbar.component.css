@@ -18,18 +18,22 @@
   }
   
   .navbar-nav .nav-link {
-    font-size: 16px; /* Nav links font size */
-    color: #333; /* Nav links text color */
-  }
+    font-size: 16px;
+    color: #333;
+    position: relative; /* Pozisyonlandırma için gerekli */
+    padding-bottom: 8px; /* Çizgi için altta boşluk bırakır */
+}
+
+.navbar-nav .nav-link.active::after {
+    content: ""; /* İçerik gereklidir ama boş */
+    position: absolute; /* Mutlak pozisyonlandırma */
+    bottom: -20px; /* Navbar'ın hemen altında çizgi */
+    left: 0; /* Çizginin başlangıç noktası */
+    right: 0; /* Çizginin bitiş noktası */
+    height: 3px; /* Çizginin kalınlığı */
+    background-color: #007bff; /* Mavi çizgi rengi */
+    width: 100%; /* Tam genişlik */
+}
+
   
-  .navbar-nav .nav-link.active {
-    font-weight: bold; /* Active nav link font weight */
-  }
-  
-  .login-button {
-    background-color: #007bff; /* Login button background color */
-    color: white !important; /* Login button text color */
-    border-radius: 20px; /* Adjust button border radius */
-    padding: 8px 20px; /* Adjust button padding */
-  }
-  
+ 

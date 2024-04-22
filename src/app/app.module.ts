@@ -13,13 +13,21 @@ import { SharedModule } from './modules/shared/shared.module';
 import { GuestModule } from './modules/guest/guest.module';
 import { NavbarComponent } from './modules/component/navbar/navbar.component';
 import { HomeComponent } from './modules/component/home/home.component';
-import { HeroComponent } from './modules/component/hero/hero.component';
+import { FooterComponent } from './modules/component/footer/footer.component';
+import { TeamComponent } from './modules/component/team/team.component';
+import { PublicationsComponent } from './modules/component/publications/publications.component';
+import { ProjectsComponent } from './modules/component/projects/projects.component';
+import { CollaborationsComponent } from './modules/component/collaborations/collaborations.component';
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    HeroComponent,
+    FooterComponent,
+    TeamComponent,
+    PublicationsComponent,
+    ProjectsComponent,
+    CollaborationsComponent,
   ],
   imports: [
     MatSidenavModule,
