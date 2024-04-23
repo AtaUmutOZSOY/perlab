@@ -7,6 +7,8 @@ import { TeamComponent } from './modules/component/team/team.component';
 import { PublicationsComponent } from './modules/component/publications/publications.component';
 import { ProjectsComponent } from './modules/component/projects/projects.component';
 import { CollaborationsComponent } from './modules/component/collaborations/collaborations.component';
+import { LoginComponent } from './modules/admin/components/login/login.component';
+import { AdminDashboardComponent } from './modules/admin/components/admin-dashboard/admin-dashboard.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponent,pathMatch:"full"},
@@ -15,6 +17,9 @@ const routes: Routes = [
   {path:"publications",component:PublicationsComponent},
   {path:"projects",component:ProjectsComponent},
   {path:"collaborations",component:CollaborationsComponent},
+  {path:"login",component:LoginComponent},
+  {path:"admin-dashboard",component:AdminDashboardComponent , canActivate:[AuthGuard]},
+
 ];
 
 @NgModule({

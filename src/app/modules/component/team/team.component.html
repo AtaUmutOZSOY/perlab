@@ -1,1 +1,16 @@
-<p>team works!</p>
+<!-- team.component.html -->
+<div class="container">
+    <div class="row">
+      <div *ngFor="let member of teamMembers" class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
+        <div class="card h-100">
+          <img [src]="'data:image/png;base64,' + member.personImageBase64String" class="card-img-top" alt="{{ member.firstName }}">
+          <div class="card-body">
+            <h5 class="card-title">{{ member.firstName }} {{ member.middleName }} {{ member.lastName }}</h5>
+            <p class="card-text">{{ member.graduateSchoolName }}</p>
+            <a [href]="member.linkedInUrl" class="btn btn-primary">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

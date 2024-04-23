@@ -12,7 +12,7 @@ import { ResponseModel } from 'src/app/responses/response-model';
 })
 export class AuthService {
 
-  apiUrl:string=environment.apiUrl+'Auth/'
+  apiUrl:string=environment.apiUrl+'Auths/'
   constructor(private httpClient:HttpClient) { }
 
   logIn(userForLoginDto:UserForLoginDto):Observable<SingleResponseModel<TokenModel>>{

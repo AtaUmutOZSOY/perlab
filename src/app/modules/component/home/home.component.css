@@ -10,7 +10,9 @@
 .hero-title {
   font-size: 48px;
   animation: slideInFromLeft 1s ease-out;
+  margin-bottom: 40px; /* Başlık ile buton arasındaki boşluğu artır */
 }
+
 
 .hero-subtitle {
   font-size: 24px;
@@ -40,12 +42,7 @@
   }
 }
 
-/* News Feed Section Styling */
-.newsFeed {
-  background-color: #f8f9fa;
-  padding: 40px 0; /* Ayarladığım padding değeri */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
+
 
 .nav-tabs {
   border-bottom: 2px solid #dee2e6;

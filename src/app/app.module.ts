@@ -18,6 +18,10 @@ import { TeamComponent } from './modules/component/team/team.component';
 import { PublicationsComponent } from './modules/component/publications/publications.component';
 import { ProjectsComponent } from './modules/component/projects/projects.component';
 import { CollaborationsComponent } from './modules/component/collaborations/collaborations.component';
+import { AdminModule } from './modules/admin/admin.module';
+import { MatFormField, MatFormFieldModule } from '@angular/material/form-field';
+import { AdminDashboardComponent } from './modules/admin/components/admin-dashboard/admin-dashboard.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +34,9 @@ import { CollaborationsComponent } from './modules/component/collaborations/coll
     CollaborationsComponent,
   ],
   imports: [
+    AdminModule,
+    BrowserModule,
+    MatFormFieldModule,
     MatSidenavModule,
     MatListModule,
     SharedModule,
