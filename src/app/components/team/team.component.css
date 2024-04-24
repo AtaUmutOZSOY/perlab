@@ -1,0 +1,72 @@
+/* Genel kart stillemesi */
+.card {
+  border-radius: 8px; /* Daha yumuşak köşeler */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* Daha belirgin bir gölge */
+  background-color: #ffffff; /* Temiz beyaz arka plan */
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1); /* Animasyon için yumuşak geçiş */
+}
+
+.card:hover {
+  transform: translateY(-8px); /* Kartı yukarı kaldır */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Hover durumunda gölgeyi artır */
+}
+
+/* Resim için stil */
+.card-img-top {
+  width: 100%; /* Resmin tüm genişliği kaplaması */
+  height: 180px; /* Sabit bir yükseklik */
+  object-fit: cover; /* Resmin oranlarını koruyarak kaplaması */
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+/* Kart içeriği */
+.card-content {
+  padding: 20px; /* İçerik için yeterli padding */
+}
+
+.card-title {
+  font-size: 18px; /* Başlık boyutu */
+  font-weight: bold;
+  color: #333; /* Daha koyu bir renk */
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  color: #666; /* Daha hafif bir metin rengi */
+  font-size: 14px; /* Metin boyutu */
+  margin-bottom: 1.5rem; /* Metin altındaki boşluk */
+}
+
+/* Düğmeler için genel stil */
+.button {
+  display: inline-flex; /* İçerikleri hizalamak için flex */
+  align-items: center; /* İkonları ve metni ortala */
+  justify-content: center; /* İkonları ve metni merkezle */
+  width: 40px;
+  height: 40px;
+  border: none; /* Çerçeve kaldırıldı */
+  border-radius: 50%;
+  background-color: #007bff; /* Parlak bir mavi */
+  color: white; /* Beyaz metin */
+  font-size: 16px; /* İkon boyutu */
+  cursor: pointer; /* İmleç düğme olarak değişir */
+  transition: background-color 0.3s ease; /* Arka plan rengi animasyonu */
+}
+
+
+.button:hover {
+  background-color: #0056b3; /* Daha koyu bir maviye dönüşür */
+}
+
+
+.fa-icon {
+  width: 50px; /* İkon genişliği */
+  height: 50px; /* İkon yüksekliği */
+  color: inherit; /* Ana öğeden renk miras al */
+}
+.button-container {
+  display: flex; /* Flexbox kullanarak içerikleri düzenle */
+  justify-content: center; /* Buttonları merkeze hizala */
+  gap: 15px; /* Buttonlar arası boşluk */
+}

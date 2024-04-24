@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div *ngFor="let member of teamMembers" class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
+      <mat-card class="h-100">
+        <img [src]="'data:image/png;base64,' + member.personImageBase64String" class="card-img-top" [alt]="member.firstName">
+        <mat-card-content>
+          <h5 class="card-title">{{ member.firstName }} {{ member.middleName }} {{ member.lastName }}</h5>
+          <p class="card-text">{{ member.graduateSchoolName }}</p>
+          <div class="button-container">
+            <button mat-fab color="white">
+              <fa-icon [icon]="faLinkedin" style="color: rgb(10, 96, 217);"></fa-icon>
+            </button>
+            <button mat-fab color="white">
+              <fa-icon [icon]="faResearchGate" style="color: rgb(6, 87, 6);"></fa-icon>
+            </button>
+          </div>
+          
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>

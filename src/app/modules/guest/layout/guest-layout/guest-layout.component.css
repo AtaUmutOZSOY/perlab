@@ -1,0 +1,15 @@
+.content-wrapper {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ekranın tamamını kaplaması için */
+}
+
+/* Navbar'dan sonra gelen içeriği aşağı itmek için */
+app-navbar {
+    margin-bottom: 20px; /* Navbar ile içerik arasındaki boşluk */
+}
+
+.content {
+    flex: 1; /* İçeriği genişlet ve ekranı doldur */
+}

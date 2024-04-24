@@ -1,34 +1,34 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
-import { ManageTeamComponent } from './components/manage-team/manage-team.component';
-import { ManageProjectsComponent } from './components/manage-projects/manage-projects.component';
-import { ManagePublicationsComponent } from './components/manage-publications/manage-publications.component';
-import { ManageCollaborationsComponent } from './components/manage-collaborations/manage-collaborations.component';
+import { AdminLayoutComponent } from './layout/admin-layout/admin-layout.component';
+import { AuthGuard } from 'src/app/guards/auth.guard';
+import { ManageTeamComponent } from 'src/app/admin-components/manage-team/manage-team.component';
+import { ManagePublicationsComponent } from 'src/app/admin-components/manage-publications/manage-publications.component';
+import { ManageProjectsComponent } from 'src/app/admin-components/manage-projects/manage-projects.component';
+import { ManageCollaborationsComponent } from 'src/app/admin-components/manage-collaborations/manage-collaborations.component';
+import { LoginComponent } from 'src/app/components/login/login.component';
 
-const routes: Routes = [
+const adminRoutes: Routes = [
   {
-    path: 'admin-dashboard', component: AdminDashboardComponent,
+    path: "admin",
+    component: AdminLayoutComponent,
+    children: [
+      { path: "", redirectTo: "manage-team", pathMatch: "full" },
+      { path: "manage-team", component: ManageTeamComponent },
+      { path: "manage-projects", component: ManageProjectsComponent },
+      { path: "manage-publications", component: ManagePublicationsComponent },
+      { path: "manage-collaborations", component: ManageCollaborationsComponent },
+    ],
+    
+    canActivate:[AuthGuard]
   },
   {
-    path:'manage-team',component:ManageTeamComponent,
-  },
-  {
-    path:'manage-projects',component:ManageProjectsComponent,
-
-  },
-  {
-    path:'manage-publications',component:ManagePublicationsComponent,
-
-  },
-  {
-    path:'manage-collaborations',component:ManageCollaborationsComponent,
-
-  },
+    path:"login",component:LoginComponent
+  }
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
+  imports: [RouterModule.forChild(adminRoutes)],
   exports: [RouterModule]
 })
 export class AdminRoutingModule { }
