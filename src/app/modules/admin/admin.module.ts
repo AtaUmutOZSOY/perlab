@@ -16,11 +16,13 @@ import { MatCardModule } from '@angular/material/card';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatTableModule} from '@angular/material/table';
+import { ManageCollaborationsComponent } from 'src/app/admin-components/manage-collaborations/manage-collaborations.component';
 @NgModule({
   declarations: [
     AdminLayoutComponent,
     LoginComponent,
-
+    ManageCollaborationsComponent
   ],
   imports: [
     ToastrModule.forRoot({
@@ -45,7 +47,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatInputModule,
     MatButtonModule,
     MatFormFieldModule,
-    MatCardModule
+    MatCardModule,
+    MatTableModule,
 
     
   ]
