@@ -1,0 +1,36 @@
+/* not-found.component.css */
+.not-found {
+    text-align: center;
+    padding-top: 100px; /* Sayfanın üst kısmında biraz boşluk bırak */
+    font-family: 'Arial', sans-serif; /* Daha modern bir font kullan */
+    color: #333; /* Yazı rengi */
+    background: #f8f9fa; /* Açık gri bir arka plan rengi */
+    height: 100vh; /* Tam sayfa yüksekliği */
+  }
+  
+  .not-found h1 {
+    font-size: 48px; /* Başlık boyutunu büyüt */
+    margin-bottom: 20px; /* Başlık altında boşluk bırak */
+  }
+  
+  .not-found p {
+    font-size: 18px; /* Paragraf font boyutu */
+    margin-bottom: 30px; /* Paragraf altında boşluk bırak */
+  }
+  
+  .not-found .home-link {
+    font-size: 20px; /* Link font boyutunu belirle */
+    color: #007bff; /* Link rengi */
+    text-decoration: none; /* Altı çizili metni kaldır */
+    border: 2px solid #007bff; /* Kenarlık ekle */
+    padding: 10px 20px; /* İç boşluk */
+    border-radius: 5px; /* Kenarları yuvarlaklaştır */
+    transition: all 0.3s; /* Geçiş animasyonu ekle */
+  }
+  
+  .not-found .home-link:hover {
+    background-color: #007bff; /* Fare üzerine gelince arka planı değiştir */
+    color: #fff; /* Fare üzerine gelince yazı rengini değiştir */
+    text-decoration: none; /* Fare üzerine gelince altı çiziliyi kaldır */
+  }
+  

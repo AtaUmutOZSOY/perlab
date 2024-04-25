@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, Router } from '@angular/router';
 import { AuthService } from '../modules/admin/services/auth.service';
 import { TokenModel } from '../modules/admin/models/token-model';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,7 @@ export class AuthGuard implements CanActivate {
 
   canActivate(
     route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot): boolean {
+    state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
       const token = localStorage.getItem('token');
       const expiration = localStorage.getItem('expiration');
 
@@ -25,11 +26,13 @@ export class AuthGuard implements CanActivate {
         expiration: new Date(expiration)
       };
 
-      if (this.authService.isAuthenticated(tokenModel)) {
-        return true;
+      // AuthService'den gelen boolean cevabı Observable'e çevir
+      const isAuthenticated = this.authService.checkAuthentication(tokenModel);
+      if (isAuthenticated) {
+        return of(true);
       } else {
-        this.router.navigate(['/login']); // Token geçersiz ise kullanıcıyı login sayfasına yönlendir
-        return false;
+        this.router.navigate(['/login']);
+        return of(false);
       }
   }
 }

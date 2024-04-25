@@ -23,26 +23,31 @@ export class LoginComponent implements OnInit {
     this.initForm();
   }
 
-  onSubmit(){
+  onSubmit() {
     if (this.loginForm.valid) {
-        const userForLoginDto:UserForLoginDto = Object.assign({},this.loginForm.value);
-        this.authService.logIn(userForLoginDto).subscribe({
-          next:(response)=>{
-            if (response.success) {
-              this.toastrService.success(response.message,"Login Succeed");
-              localStorage.setItem("token",response.data.token);
-              localStorage.setItem("expiration",response.data.expiration.toString());
-              this.router.navigate(['/admin/manage-team']);
-            }else{
-              this.toastrService.error(response.message,'An Error Occured');
-            }
-          },
-          error:(httpErrorResponse:HttpErrorResponse)=>{
-            console.log("API error: ",httpErrorResponse.error);
+      const userForLoginDto: UserForLoginDto = Object.assign({}, this.loginForm.value);
+      this.authService.logIn(userForLoginDto).subscribe({
+        next: (response) => {
+          if (response.success) {
+            this.toastrService.success(response.message, "Login Succeeded");
+            localStorage.setItem("token", response.data.token);
+            localStorage.setItem("expiration", response.data.expiration.toString());
+            // Burada bir timeout ekleyerek navigasyonu geciktirebiliriz.
+            setTimeout(() => {
+              this.router.navigate(['/admin']);
+            }, 100);
+          } else {
+            this.toastrService.error(response.message, 'Login Failed');
           }
-        })
-      }
+        },
+        error: (httpErrorResponse: HttpErrorResponse) => {
+          console.log("API error: ", httpErrorResponse.error);
+          this.toastrService.error("Login Failed: " + httpErrorResponse.message, 'Error');
+        }
+      });
     }
+  }
+  
 
     initForm(){
       this.loginForm = this.formBuilder.group({

@@ -12,6 +12,7 @@ import { ResponseModel } from 'src/app/responses/response-model';
 })
 export class AuthService {
 
+  isAuthenticated:boolean=false;
   apiUrl:string=environment.apiUrl+'Auths/'
   constructor(private httpClient:HttpClient) { }
 
@@ -19,8 +20,19 @@ export class AuthService {
     let newUrl:string=this.apiUrl+'login';
     return this.httpClient.post<SingleResponseModel<TokenModel>>(newUrl,userForLoginDto);
   }
-  isAuthenticated(tokenModel:TokenModel):Observable<ResponseModel>{
-    let newUrl:string=this.apiUrl+'checkUserAuthentication';
-    return this.httpClient.post<ResponseModel>(newUrl,tokenModel);
+  checkAuthentication(tokenModel: TokenModel): boolean {
+    const now = new Date();
+    // Token'ın varlığını ve süresinin geçmemiş olmasını kontrol ediyoruz.
+    if (tokenModel && tokenModel.token && tokenModel.expiration > now) {
+      this.isAuthenticated = true;
+    } else {
+      this.isAuthenticated = false;
+    }
+    return this.isAuthenticated;
+  }
+
+  // Kimlik doğrulama durumunu döndür
+  getAuthenticationStatus(): boolean {
+    return this.isAuthenticated;
   }
 }

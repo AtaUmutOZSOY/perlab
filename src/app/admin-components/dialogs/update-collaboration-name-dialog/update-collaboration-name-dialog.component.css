@@ -1,0 +1,11 @@
+.action-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+  
+  mat-form-field {
+    width: 100%; /* Form alanlarını tam genişlik yap */
+    margin-bottom: 20px; /* Form alanları arasında boşluk */
+  }
+  

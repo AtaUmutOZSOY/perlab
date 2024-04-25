@@ -7,6 +7,7 @@ import { ManagePublicationsComponent } from 'src/app/admin-components/manage-pub
 import { ManageProjectsComponent } from 'src/app/admin-components/manage-projects/manage-projects.component';
 import { ManageCollaborationsComponent } from 'src/app/admin-components/manage-collaborations/manage-collaborations.component';
 import { LoginComponent } from 'src/app/components/login/login.component';
+import { NotFoundComponent } from 'src/app/components/not-found/not-found.component';
 
 const adminRoutes: Routes = [
   {
@@ -19,12 +20,11 @@ const adminRoutes: Routes = [
       { path: "manage-publications", component: ManagePublicationsComponent },
       { path: "manage-collaborations", component: ManageCollaborationsComponent },
     ],
-    
-    canActivate:[AuthGuard]
+    canActivate:[AuthGuard],
   },
   {
-    path:"login",component:LoginComponent
-  }
+    path: "login", component: LoginComponent
+  },
 ];
 
 @NgModule({

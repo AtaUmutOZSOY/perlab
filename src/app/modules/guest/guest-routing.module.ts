@@ -6,6 +6,7 @@ import { ProjectsComponent } from 'src/app/components/projects/projects.componen
 import { PublicationsComponent } from 'src/app/components/publications/publications.component';
 import { TeamComponent } from 'src/app/components/team/team.component';
 import { GuestLayoutComponent } from './layout/guest-layout/guest-layout.component';
+import { NotFoundComponent } from 'src/app/components/not-found/not-found.component';
 
 const guestRoutes: Routes = [
   {
@@ -20,6 +21,8 @@ const guestRoutes: Routes = [
       { path: "collaborations", component: CollaborationsComponent }
     ]
   },
+  
+
 ];
 
 
