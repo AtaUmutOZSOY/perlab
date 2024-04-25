@@ -7,6 +7,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { GuestModule } from './modules/guest/guest.module';
 import { LoginComponent } from './components/login/login.component';
 import { AdminModule } from './modules/admin/admin.module';
+import { CreateNewCollaborationDialogComponent } from './admin-components/dialogs/create-new-collaboration-dialog/create-new-collaboration-dialog.component';
 
 @NgModule({
   declarations: [

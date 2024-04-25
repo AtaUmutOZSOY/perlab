@@ -1,0 +1,23 @@
+<mat-dialog-content>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill" style="width: 100%">
+      <mat-label>Collaboration Name</mat-label>
+      <input matInput formControlName="collaborationName">
+    </mat-form-field>
+    
+    <mat-form-field appearance="fill" style="width: 100%">
+      <mat-label>Website Link</mat-label>
+      <input matInput formControlName="websiteLink">
+    </mat-form-field>
+
+    <!-- Resim yükleme alanı -->
+    <div style="margin: 20px 0;">
+      <input type="file" formControlName="image" (change)="onFileSelected($event)" accept="image/*">
+    </div>
+
+    <div mat-dialog-actions class="action-buttons">
+      <button mat-button (click)="close()">Close</button>
+      <button mat-button color="primary" form="yourFormId" type="submit">Add</button>
+    </div>
+  </form>
+</mat-dialog-content>

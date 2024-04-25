@@ -17,12 +17,15 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatTableModule} from '@angular/material/table';
+import {MatDialogModule} from '@angular/material/dialog';
 import { ManageCollaborationsComponent } from 'src/app/admin-components/manage-collaborations/manage-collaborations.component';
+import { CreateNewCollaborationDialogComponent } from 'src/app/admin-components/dialogs/create-new-collaboration-dialog/create-new-collaboration-dialog.component';
 @NgModule({
   declarations: [
     AdminLayoutComponent,
     LoginComponent,
-    ManageCollaborationsComponent
+    ManageCollaborationsComponent,
+    CreateNewCollaborationDialogComponent
   ],
   imports: [
     ToastrModule.forRoot({
@@ -34,11 +37,13 @@ import { ManageCollaborationsComponent } from 'src/app/admin-components/manage-c
       positionClass:"toast-bottom-right"
     }),
     CommonModule,
+    MatDialogModule,
     AdminRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
     MatSidenavModule,
     MatToolbarModule,
+    MatInputModule,
     MatButtonModule,
     MatIconModule,
     MatListModule,
