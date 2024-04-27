@@ -23,6 +23,7 @@ import {MatCardModule} from '@angular/material/card';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'; // Import the LinkedIn icon
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 library.add(faLinkedin);
 
@@ -45,6 +46,7 @@ library.add(faLinkedin);
     MatCardModule,
     MatDividerModule,    
     MatButtonModule,
+    MatTooltipModule,
     MatIconModule,
     CommonModule,
     GuestRoutingModule,

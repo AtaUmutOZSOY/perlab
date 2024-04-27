@@ -1,13 +1,19 @@
 
 <mat-toolbar color="primary" *ngIf="isLoggedIn">
-    <button mat-icon-button (click)="sidenav.toggle()">
+    <button mat-icon-button (click)="sidenav.toggle()" matTooltip="Show  Navigation Menu">
       <mat-icon>menu</mat-icon>
     </button>
     Perlab Admin
+    <div class="logout-button-container" style="flex: 1; text-align: right;">
+      <button mat-icon-button matTooltip="Exit">
+        <mat-icon>logout</mat-icon>
+      </button>
+    </div>
   </mat-toolbar>
 <mat-sidenav-container class="sidenav-container">
     <mat-sidenav #sidenav mode="side" opened="false">
       <mat-nav-list>
+        <a mat-list-item routerLink="/admin/manage-authors">Authors</a>
         <a mat-list-item routerLink="/admin/manage-announcements">Announcements</a>
         <a mat-list-item routerLink="/admin/manage-events">Events</a>
          <a mat-list-item routerLink="/admin/manage-collaborations">Collaborations</a>
@@ -16,6 +22,7 @@
           <a mat-list-item routerLink="/admin/manage-team">Team</a>
       </mat-nav-list>
     </mat-sidenav>
+    
     <mat-sidenav-content>
       
       <!-- Ana içerik burada yer alacak -->

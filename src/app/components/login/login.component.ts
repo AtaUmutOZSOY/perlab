@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
       this.authService.logIn(userForLoginDto).subscribe({
         next: (response) => {
           if (response.success) {
-            this.toastrService.success(response.message, "Login Succeeded");
+            this.toastrService.success("Login Success");
             localStorage.setItem("token", response.data.token);
             localStorage.setItem("expiration", response.data.expiration.toString());
             // Burada bir timeout ekleyerek navigasyonu geciktirebiliriz.

@@ -1,0 +1,36 @@
+    
+    <h4 mat-dialog-title> Create New Project </h4>
+    <mat-dialog-content>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="fill" style="width: 100%">
+        <mat-label>Projet Title</mat-label>
+        <input matInput formControlName="title">
+        </mat-form-field>
+        <mat-form-field appearance="fill" style="width: 100%">
+        <mat-label>Project Description</mat-label>
+        <input matInput formControlName="description">
+        </mat-form-field>
+        <mat-form-field appearance="fill" style="width: 100%">
+            <mat-label>Project Manager Full Name</mat-label>
+            <input matInput formControlName="projectManagerFullName">
+        </mat-form-field>
+        <mat-form-field appearance="fill" style="width: 100%">
+            <mat-label>Start date</mat-label>
+            <input matInput formControlName="startDate" [matDatepicker]="startdatepicker">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="startdatepicker"></mat-datepicker-toggle>
+            <mat-datepicker #startdatepicker></mat-datepicker>
+          </mat-form-field>
+          <mat-form-field appearance="fill" style="width: 100%">
+            <mat-label>Deadline</mat-label>
+            <input matInput formControlName="deadLine" [matDatepicker]="deadlinepicker">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="deadlinepicker"></mat-datepicker-toggle>
+            <mat-datepicker #deadlinepicker></mat-datepicker>
+          </mat-form-field>  
+        <div mat-dialog-actions class="action-buttons">
+        <button mat-button (click)="close()">Close</button>
+        <button mat-button color="primary" type="submit">Add</button>
+        </div>
+    </form>
+    </mat-dialog-content>

@@ -1,7 +1,7 @@
 import { NewsFeedEnums } from "../enums/news-feed-enums";
 
 export interface NewsFeed {
-    id:number
+    id:number,
     newsFeedType:NewsFeedEnums,
     isNew:boolean;
     isImportant:boolean;

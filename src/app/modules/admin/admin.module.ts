@@ -24,15 +24,32 @@ import { CreateNewCollaborationDialogComponent } from 'src/app/admin-components/
 import { UpdateCollaborationNameDialogComponent } from 'src/app/admin-components/dialogs/update-collaboration-name-dialog/update-collaboration-name-dialog.component';
 import { UpdateCollaborationWebSiteDialogComponent } from 'src/app/admin-components/dialogs/update-collaboration-web-site-dialog/update-collaboration-web-site-dialog.component';
 import { ConfirmDialogComponent } from 'src/app/admin-components/dialogs/confirm-dialog/confirm-dialog.component';
+import { ManageProjectsComponent } from 'src/app/admin-components/manage-projects/manage-projects.component';
+import { CreateNewProjectDialogComponent } from 'src/app/admin-components/dialogs/create-new-project-dialog/create-new-project-dialog.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { UpdateProjectDialogComponent } from 'src/app/admin-components/dialogs/update-project-dialog/update-project-dialog.component';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { ManageAuthorsComponent } from 'src/app/admin-components/manage-authors/manage-authors.component';
+import { ManageEventsComponent } from 'src/app/admin-components/manage-events/manage-events.component';
+import { ManageAnnouncementsComponent } from 'src/app/admin-components/manage-announcements/manage-announcements.component';
+
 @NgModule({
   declarations: [
     AdminLayoutComponent,
     LoginComponent,
+    ManageAuthorsComponent,
     ManageCollaborationsComponent,
+    ManageProjectsComponent,
+    ManageAnnouncementsComponent,
+    ManageEventsComponent,
     CreateNewCollaborationDialogComponent,
     UpdateCollaborationNameDialogComponent,
     UpdateCollaborationWebSiteDialogComponent,
+    CreateNewProjectDialogComponent,  
     ConfirmDialogComponent,
+    UpdateProjectDialogComponent,
 
   ],
   imports: [
@@ -63,7 +80,10 @@ import { ConfirmDialogComponent } from 'src/app/admin-components/dialogs/confirm
     MatCardModule,
     MatTableModule,
     MatTooltipModule,
-    
+    MatNativeDateModule,
+    MatDatepickerModule,
+    MatCheckboxModule,
+    FlexLayoutModule
   ]
 })
 export class AdminModule { }

@@ -1,0 +1,66 @@
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Kartlar arasında düzgün bir boşluk sağlar */
+    padding: 10px; /* Dış padding kartların çevresinde boşluk bırakır */
+  }
+  
+  .card-container {
+    flex: 0 1 300px; /* Her kart 300px genişliğinde olacak ve büyüyüp küçülebilir */
+    margin: 20px; /* Her kart arasında yeterli boşluk */
+  }
+  
+  .custom-card {
+    width: 100%;
+    max-width: 300px; /* Kartların maksimum genişliğini sınırlayın */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15); /* Daha belirgin bir gölge efekti */
+    transition: transform 0.3s ease-in-out; /* Hover durumunda animasyon ekleyin */
+  }
+  
+  .custom-card:hover {
+    transform: scale(1.05); /* Hover durumunda kartı büyüt */
+  }
+  
+  .card-header img {
+    width: 100%; /* Resmin kart genişliğine uymasını sağlayın */
+    height: 200px; /* Resmin yüksekliğini sabitleyin */
+    object-fit: cover; /* Resmin boyutunu kaplayacak şekilde ayarlayın */
+  }
+  
+  mat-card-content {
+    padding: 10px;
+    text-align: center; /* İçeriği merkeze alın */
+  }
+  
+  mat-card-content h3 {
+    font-size: 1.5rem; /* Başlık boyutunu büyütün */
+    color: #333; /* Başlık rengini koyulaştırın */
+    margin-top: 10px; /* Başlık üst boşluğunu ayarlayın */
+  }
+  
+  mat-card-content p {
+    font-size: 1rem;
+    color: #666;
+    margin: 5px 0 15px; /* Paragraf boşluklarını ayarlayın */
+  }
+  
+  mat-card-actions {
+    display: flex;
+    justify-content: center; /* Butonu merkeze alın */
+    padding-bottom: 20px; /* Alt padding ekleyin */
+  }
+  
+  mat-card-actions button {
+    background-color: #0069d9; /* Buton arka plan rengini ayarlayın */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 0.875rem;
+    border-radius: 4px; /* Buton kenarlarını yuvarlak yapın */
+    cursor: pointer; /* İmleci pointer olarak ayarlayın */
+  }
+  
+  mat-card-actions button:hover {
+    background-color: #0056b3; /* Hover durumunda buton rengini koyulaştırın */
+  }
+  

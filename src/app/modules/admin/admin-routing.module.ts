@@ -7,7 +7,9 @@ import { ManagePublicationsComponent } from 'src/app/admin-components/manage-pub
 import { ManageProjectsComponent } from 'src/app/admin-components/manage-projects/manage-projects.component';
 import { ManageCollaborationsComponent } from 'src/app/admin-components/manage-collaborations/manage-collaborations.component';
 import { LoginComponent } from 'src/app/components/login/login.component';
-import { NotFoundComponent } from 'src/app/components/not-found/not-found.component';
+import { ManageAuthorsComponent } from 'src/app/admin-components/manage-authors/manage-authors.component';
+import { ManageEventsComponent } from 'src/app/admin-components/manage-events/manage-events.component';
+import { ManageAnnouncementsComponent } from 'src/app/admin-components/manage-announcements/manage-announcements.component';
 
 const adminRoutes: Routes = [
   {
@@ -15,6 +17,9 @@ const adminRoutes: Routes = [
     component: AdminLayoutComponent,
     children: [
       { path: "", redirectTo: "manage-team", pathMatch: "full" },
+      { path: "manage-authors", component: ManageAuthorsComponent },
+      { path: "manage-events", component: ManageEventsComponent },
+      { path: "manage-announcements", component: ManageAnnouncementsComponent },
       { path: "manage-team", component: ManageTeamComponent },
       { path: "manage-projects", component: ManageProjectsComponent },
       { path: "manage-publications", component: ManagePublicationsComponent },

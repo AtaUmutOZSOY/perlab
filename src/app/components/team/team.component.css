@@ -1,72 +1,75 @@
-/* Genel kart stillemesi */
-.card {
-  border-radius: 8px; /* Daha yumuşak köşeler */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* Daha belirgin bir gölge */
-  background-color: #ffffff; /* Temiz beyaz arka plan */
-  transition: all 0.3s cubic-bezier(.25,.8,.25,1); /* Animasyon için yumuşak geçiş */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Kartlar arasında düzgün bir boşluk sağlar */
+  padding: 10px; /* Dış padding kartların çevresinde boşluk bırakır */
 }
 
-.card:hover {
-  transform: translateY(-8px); /* Kartı yukarı kaldır */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Hover durumunda gölgeyi artır */
+.card-container {
+  flex: 0 1 300px; /* Her kart 300px genişliğinde olacak ve büyüyüp küçülebilir */
+  margin: 20px; /* Her kart arasında yeterli boşluk */
 }
 
-/* Resim için stil */
-.card-img-top {
-  width: 100%; /* Resmin tüm genişliği kaplaması */
-  height: 180px; /* Sabit bir yükseklik */
-  object-fit: cover; /* Resmin oranlarını koruyarak kaplaması */
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+.custom-card {
+  width: 100%;
+  max-width: 300px; /* Kartların maksimum genişliğini sınırlayın */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15); /* Daha belirgin bir gölge efekti */
+  transition: transform 0.3s ease-in-out; /* Hover durumunda animasyon ekleyin */
 }
 
-/* Kart içeriği */
-.card-content {
-  padding: 20px; /* İçerik için yeterli padding */
+.custom-card:hover {
+  transform: scale(1.05); /* Hover durumunda kartı büyüt */
 }
 
-.card-title {
-  font-size: 18px; /* Başlık boyutu */
-  font-weight: bold;
-  color: #333; /* Daha koyu bir renk */
-  margin-bottom: 0.5rem;
+.card-header img {
+  width: 100%; /* Resmin kart genişliğine uymasını sağlayın */
+  height: 200px; /* Resmin yüksekliğini sabitleyin */
+  object-fit: cover; /* Resmin boyutunu kaplayacak şekilde ayarlayın */
 }
 
-.card-text {
-  color: #666; /* Daha hafif bir metin rengi */
-  font-size: 14px; /* Metin boyutu */
-  margin-bottom: 1.5rem; /* Metin altındaki boşluk */
+mat-card-content {
+  padding: 10px;
+  text-align: center; /* İçeriği merkeze alın */
 }
 
-/* Düğmeler için genel stil */
-.button {
-  display: inline-flex; /* İçerikleri hizalamak için flex */
-  align-items: center; /* İkonları ve metni ortala */
-  justify-content: center; /* İkonları ve metni merkezle */
-  width: 40px;
-  height: 40px;
-  border: none; /* Çerçeve kaldırıldı */
-  border-radius: 50%;
-  background-color: #007bff; /* Parlak bir mavi */
-  color: white; /* Beyaz metin */
-  font-size: 16px; /* İkon boyutu */
-  cursor: pointer; /* İmleç düğme olarak değişir */
-  transition: background-color 0.3s ease; /* Arka plan rengi animasyonu */
+mat-card-content h3 {
+  font-size: 1.5rem; /* Başlık boyutunu büyütün */
+  color: #333; /* Başlık rengini koyulaştırın */
+  margin-top: 10px; /* Başlık üst boşluğunu ayarlayın */
+}
+
+mat-card-content p {
+  font-size: 1rem;
+  color: #666;
+  margin: 5px 0 15px; /* Paragraf boşluklarını ayarlayın */
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: space-evenly; /* Butonları eşit aralıklarla ayır */
+  padding-bottom: 20px;
+  
+}
+
+div.mat-card-actions button.mat-fab {
+  background-color: #2196F3; /* Parlak mavi renk */
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: none; /* Başlangıçta gölge yok */
+  transition: all 0.3s ease; /* Pürüzsüz geçiş efektleri */
+}
+
+div.mat-card-actions button.mat-fab:hover {
+  background-color: #1976D2; /* Hover durumunda daha koyu mavi */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Hover durumunda gölge efekti */
+}
+
+div.mat-card-actions button.mat-fab:active {
+  transform: translateY(2px); /* Aktif durumda buton hareketi */
 }
 
 
-.button:hover {
-  background-color: #0056b3; /* Daha koyu bir maviye dönüşür */
-}
-
-
-.fa-icon {
-  width: 50px; /* İkon genişliği */
-  height: 50px; /* İkon yüksekliği */
-  color: inherit; /* Ana öğeden renk miras al */
-}
-.button-container {
-  display: flex; /* Flexbox kullanarak içerikleri düzenle */
-  justify-content: center; /* Buttonları merkeze hizala */
-  gap: 15px; /* Buttonlar arası boşluk */
+mat-card-actions fa-icon {
+  font-size: 1.5rem; /* FontAwesome ikon boyutunu artırın */
 }

@@ -1,1 +1,16 @@
-<p>collaborations works!</p>
+<div class="flex-container">
+    <div class="card-container" *ngFor="let collaboration of collaborations">
+      <mat-card class="custom-card">
+        <div class="card-header">
+          <img mat-card-image [src]="collaboration.imageBase64String" alt="{{ collaboration.collaborationName }}">
+        </div>
+        <mat-card-content>
+          <h3>{{ collaboration.collaborationName }}</h3>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button >Go to Official Site</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+  
