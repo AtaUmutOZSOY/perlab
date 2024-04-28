@@ -1,0 +1,24 @@
+<div class="contact-us-container">
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3062.125034502874!2d32.735395499999996!3d39.8714371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d3476c3ad4da93%3A0x16c9e7e3f7082a6e!2zSGFjZXR0ZXBlIMOcbmkuIEJpeW9sb2ppIELDtmzDvG3DvA!5e0!3m2!1str!2str!4v1714320806184!5m2!1str!2str" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="mail-container">
+        <form [formGroup]="contactUsForm" >
+            <mat-form-field appearance="fill">
+                <mat-label>Name</mat-label>
+                <input matInput formControlName="name">
+            </mat-form-field>
+            <mat-form-field appearance="fill" >
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="email">
+            </mat-form-field>
+            <mat-form-field appearance="fill" >
+                <mat-label>Your Message</mat-label>
+                <textarea matInput placeholder="Ex. It makes me feel..." formControlName="message"></textarea>
+            </mat-form-field>
+            <mat-card-actions>
+                <button mat-raised-button color="primary" (click)="onSubmit()">Send Email</button>
+            </mat-card-actions>
+        </form>
+    </div>
+</div>

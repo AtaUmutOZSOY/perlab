@@ -7,6 +7,7 @@ import { PublicationsComponent } from 'src/app/components/publications/publicati
 import { TeamComponent } from 'src/app/components/team/team.component';
 import { GuestLayoutComponent } from './layout/guest-layout/guest-layout.component';
 import { NotFoundComponent } from 'src/app/components/not-found/not-found.component';
+import { ContactUsComponent } from 'src/app/components/contact-us/contact-us.component';
 
 const guestRoutes: Routes = [
   {
@@ -18,7 +19,9 @@ const guestRoutes: Routes = [
       { path: "projects", component: ProjectsComponent },
       { path: "publications", component: PublicationsComponent },
       { path: "team", component: TeamComponent },
-      { path: "collaborations", component: CollaborationsComponent }
+      { path: "collaborations", component: CollaborationsComponent },
+      { path: "contact-us", component: ContactUsComponent },
+
     ]
   },
   

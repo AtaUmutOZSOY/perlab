@@ -1,0 +1,50 @@
+.contact-us-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* İçeriği yatay olarak ortala */
+    justify-content: center; /* İçeriği dikey olarak ortala */
+    padding: 20px;
+    background: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: auto; /* Otomatik marjın ile tam ortaya yerleştir */
+    width: 80%; /* İstenirse ayarlanabilir */
+    max-width: 960px; /* Maksimum genişlik */
+}
+
+.map-container {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.mail-container {
+    width: 100%;
+}
+
+mat-form-field {
+    width: 100%; /* Form elemanlarının tam genişlik kaplaması */
+    margin-bottom: 16px; /* Elemanlar arası boşluk */
+}
+
+mat-card-actions {
+    display: flex;
+    justify-content: center; /* Butonu ortala */
+}
+
+button {
+    width: 200px; /* Buton genişliği */
+    height: 40px; /* Buton yüksekliği */
+}
+
+iframe {
+    width: 100%; /* Harita genişliği */
+    height: 300px; /* Harita yüksekliği */
+    border: none; /* Çerçeve kaldır */
+}
+
+/* Ekstra düzenlemeler için gerekirse media sorguları eklenebilir */
+@media (max-width: 600px) {
+    .contact-us-container {
+        flex-direction: column;
+    }
+}

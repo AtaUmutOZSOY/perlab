@@ -1,0 +1,38 @@
+/* Overall card styling (optional) */
+mat-card {
+    background-color: #fff; /* Set background color for the card */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    border-radius: 4px; /* Add rounded corners */
+  }
+  
+  /* Header styling */
+  .header-container {
+    padding: 1rem; /* Add some padding for better spacing */
+    font-weight: bold; /* Make header text bolder */
+  }
+  
+  h4 {
+    margin: 0; /* Remove default margin for better alignment */
+  }
+  
+  /* Table styling */
+  table {
+    width: 100%; /* Make table fill the card content */
+    border-collapse: collapse; /* Ensure borders collapse for better appearance */
+  }
+  
+  th,
+  td {
+    padding: 0.5rem 1rem; /* Add padding for cell content */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Create subtle borders */
+    text-align: left; /* Align text to the left by default */
+  }
+  
+  th {
+    background-color: #f5f5f5; /* Lighten header background for contrast */
+  }
+  
+  .transparent-table {
+    background-color: transparent; /* Make table background transparent */
+  }
+  

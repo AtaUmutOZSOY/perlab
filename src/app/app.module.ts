@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GuestModule } from './modules/guest/guest.module';
 import { AdminModule } from './modules/admin/admin.module';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { ContactUsComponent } from './components/contact-us/contact-us.component';
 
 
 @NgModule({

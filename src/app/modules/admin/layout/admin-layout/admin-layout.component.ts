@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
 import { TokenModel } from '../../models/token-model';
+import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-admin-layout',
@@ -9,7 +11,7 @@ import { TokenModel } from '../../models/token-model';
 })
 export class AdminLayoutComponent implements OnInit{
   
-  constructor(private autService:AuthService){
+  constructor(private autService:AuthService,private router:Router,private toastrService:ToastrService){
 
   }
 
@@ -28,4 +30,11 @@ export class AdminLayoutComponent implements OnInit{
       this.isLoggedIn = false;
     }
   }
+
+  logout(){
+    localStorage.removeItem('token');
+    localStorage.removeItem('expiration');
+    this.router.navigate(['/login']);
+    this.toastrService.info('Please sign in!')
+  } 
 }

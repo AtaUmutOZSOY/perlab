@@ -1,1 +1,35 @@
-<p>publications works!</p>
+<mat-card style="width: 100%">
+    <mat-card-header>
+      <div class="header-container" style="display: flex; justify-content: space-between; align-items: center;">
+        <h4 style="margin-right: 1.25rem">Our Publications</h4>
+      </div>
+    </mat-card-header>
+    <mat-card-content >
+      <table mat-table  [dataSource]="dataSource"  matSort class="transparent-table" >
+        <ng-container matColumnDef="publicationTitle">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Title</th>
+          <td mat-cell *matCellDef="let element">{{ element.title }}</td>
+        </ng-container>
+        <ng-container matColumnDef="journalName">
+          <th mat-header-cell *matHeaderCellDef>Journal</th>
+          <td mat-cell *matCellDef="let element">{{ element.journalName }}</td>
+        </ng-container>
+        <ng-container matColumnDef="publishedYear">
+          <th mat-header-cell *matHeaderCellDef>Year</th>
+          <td mat-cell *matCellDef="let element">{{ element.publishedYear | date}}</td>
+        </ng-container>
+        <ng-container matColumnDef="doi">
+            <th mat-header-cell *matHeaderCellDef>Doi</th>
+            <td mat-cell *matCellDef="let element">
+              <a href="{{element.doi}}">{{ element.doi }}</a>  
+            </td>
+          </ng-container>
+        <ng-container matColumnDef="issn">
+            <th mat-header-cell *matHeaderCellDef>ISSN</th>
+            <td mat-cell *matCellDef="let element">{{ element.issn }}</td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns:displayedColumns"></tr>
+      </table>
+    </mat-card-content>
+  </mat-card>

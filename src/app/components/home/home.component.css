@@ -89,3 +89,16 @@ li {
 
 
 
+section {
+  padding-top: 40px; /* Her section'ın üstüne boşluk ekler */
+  padding-bottom: 40px; /* Her section'ın altına boşluk ekler */
+}
+section:first-of-type {
+  padding-top: 20px; /* İlk section için daha az üst boşluk */
+}
+
+section:last-of-type {
+  padding-bottom: 20px; /* Son section için daha az alt boşluk */
+}
+
+/* Eğer üst ve alt sınırlar arasında daha fazla boşluk isterseniz, bu değerleri artırabilirsiniz. */

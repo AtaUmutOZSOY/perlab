@@ -12,7 +12,7 @@ import { GuestLayoutComponent } from './layout/guest-layout/guest-layout.compone
 import { HeaderComponent } from 'src/app/components/header/header.component';
 import { FooterComponent } from 'src/app/components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
@@ -24,6 +24,17 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'; // Import the LinkedIn icon
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatTableModule } from '@angular/material/table';
+import { ContactUsComponent } from 'src/app/components/contact-us/contact-us.component';
+import { GoogleMapsModule } from '@angular/google-maps';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatInputModule } from '@angular/material/input';
+import { MatListModule } from '@angular/material/list';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 library.add(faLinkedin);
 
@@ -39,8 +50,11 @@ library.add(faLinkedin);
     ProjectsComponent,
     CollaborationsComponent,
     GuestLayoutComponent,
+    ContactUsComponent,
+
   ],
   imports: [
+    GoogleMapsModule,
     FontAwesomeModule,
     MatIconModule,
     MatCardModule,
@@ -56,6 +70,26 @@ library.add(faLinkedin);
     FormsModule,
     BrowserModule,
     BrowserAnimationsModule,
+    MatTableModule,
+    MatFormFieldModule,
+    ReactiveFormsModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatInputModule,
+    MatButtonModule,
+    MatIconModule,
+    MatListModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatCardModule,
+    MatTableModule,
+    MatTooltipModule,
+    MatNativeDateModule,
+    MatDatepickerModule,
+    MatCheckboxModule,
   ],
   exports:[]
 })
