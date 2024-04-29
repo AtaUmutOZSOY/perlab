@@ -12,7 +12,6 @@ export interface Person {
     researchGateUrl:string,
     linkedInUrl:string,
     orcidUrl:string,
-    personImageId:string,
     visualRank:number,
     personImageBase64String:string
 }

@@ -38,6 +38,7 @@ import { UpdateEventDialogComponent } from 'src/app/admin-components/dialogs/upd
 import { CreateNewEventDialogComponent } from 'src/app/admin-components/dialogs/create-new-event-dialog/create-new-event-dialog.component';
 import { ManagePublicationsComponent } from 'src/app/admin-components/manage-publications/manage-publications.component';
 import { CreateNewPublicationDialogComponent } from 'src/app/admin-components/dialogs/create-new-publication-dialog/create-new-publication-dialog.component';
+import { ManageTeamComponent } from 'src/app/admin-components/manage-team/manage-team.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { CreateNewPublicationDialogComponent } from 'src/app/admin-components/di
     ManageAnnouncementsComponent,
     ManageEventsComponent,
     ManagePublicationsComponent,
+    ManageTeamComponent,
     CreateNewCollaborationDialogComponent,
     UpdateCollaborationNameDialogComponent,
     UpdateCollaborationWebSiteDialogComponent,

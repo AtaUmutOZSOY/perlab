@@ -1,0 +1,12 @@
+/* Resimler için stil */
+.mat-card-image {
+    width: 100px; /* İstenen genişlik */
+    height: 100px; /* İstenen yükseklik */
+    object-fit: cover; /* Resmi boyutlandırırken oranı koru */
+  }
+/* Resim hücresi için stil */
+td img {
+    display: block; /* Resmi blok elemanı yap */
+    margin: 0 auto; /* Yatay olarak merkezle */
+  }
+    
