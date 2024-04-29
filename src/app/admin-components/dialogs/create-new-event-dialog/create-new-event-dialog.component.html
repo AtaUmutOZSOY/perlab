@@ -1,0 +1,29 @@
+    
+    <h4 mat-dialog-title> Create New Event </h4>
+    <mat-dialog-content>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="fill" style="width: 100%">
+        <mat-label>Event Title</mat-label>
+        <input matInput formControlName="title">
+        </mat-form-field>
+        <mat-form-field appearance="fill" style="width: 100%">
+        <mat-label>Event Description</mat-label>
+        <textarea  matInput formControlName="description"></textarea>
+        </mat-form-field>
+        <mat-form-field appearance="fill" style="width: 100%">
+            <mat-label>Event Link</mat-label>
+            <input matInput formControlName="eventLink">
+            </mat-form-field>
+        <mat-form-field appearance="fill" style="width: 100%">
+            <mat-label>Start date</mat-label>
+            <input matInput formControlName="eventTime" [matDatepicker]="eventdatepicker">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="eventdatepicker"></mat-datepicker-toggle>
+            <mat-datepicker #eventdatepicker></mat-datepicker>
+          </mat-form-field>  
+        <div mat-dialog-actions class="action-buttons">
+        <button mat-button (click)="close()">Close</button>
+        <button mat-button color="primary" type="submit">Add</button>
+        </div>
+    </form>
+    </mat-dialog-content>

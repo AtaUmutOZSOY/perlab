@@ -102,3 +102,48 @@ section:last-of-type {
 }
 
 /* Eğer üst ve alt sınırlar arasında daha fazla boşluk isterseniz, bu değerleri artırabilirsiniz. */
+
+
+/* Küçük cihazlar için stil ayarlamaları (genellikle cep telefonları, 600px'e kadar) */
+@media (max-width: 600px) {
+  .hero .container .row {
+      flex-direction: column-reverse; /* Sırayı ters çevirir */
+      align-items: center; /* İçerikleri ortalar */
+  }
+
+  .hero .col-lg-6 {
+      width: 100%; /* Tüm genişliği kaplar */
+      margin-bottom: 20px; /* Buton ile resim arasında boşluk */
+  }
+
+  .btn-primary {
+      display: block; /* Butonu blok seviyesine getirir */
+      margin: 0 auto; /* Otomatik marj ile ortalanır */
+      width: fit-content; /* İçeriğine göre boyutlandırır */
+  }
+}
+
+/* Orta boy cihazlar için stil ayarlamaları (genellikle tabletler, 601px ile 900px arası) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .hero .container .row {
+      flex-direction: column-reverse; /* Sırayı ters çevirir */
+      align-items: center; /* İçerikleri ortalar */
+  }
+
+  .hero .col-lg-6 {
+      width: 100%; /* Tüm genişliği kaplar */
+      margin-bottom: 15px; /* Buton ile resim arasında boşluk */
+  }
+
+  .btn-primary {
+      display: block; /* Butonu blok seviyesine getirir */
+      margin: 0 auto; /* Otomatik marj ile ortalanır */
+      width: fit-content; /* İçeriğine göre boyutlandırır */
+      display: none;
+  }
+}
+
+/* Büyük cihazlar için stil ayarlamaları (genellikle masaüstü bilgisayarlar, 901px ve daha büyük) */
+@media (min-width: 901px) {
+  /* Masaüstü görünüm için ekstra stil gerekirse buraya eklenebilir */
+}

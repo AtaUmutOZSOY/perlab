@@ -1,1 +1,45 @@
-<p>manage-events works!</p>
+<mat-card style="width: 100%">
+    <mat-card-header>
+      <div class="header-container" style="display: flex; justify-content: space-between; align-items: center;">
+        <h4 style="margin-right: 1.25rem">Events</h4>
+        <div class="addSearchHolder">
+            <button mat-flat-button color="primary" (click)="openCreateNewEventDialog()">Create New Event</button>
+        </div>
+      </div>
+    </mat-card-header>
+    <mat-card-content>
+      <table mat-table [dataSource]="dataSource" matSort class="transparent-table">
+        <ng-container matColumnDef="title">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Title</th>
+          <td mat-cell *matCellDef="let element">{{ element.title }}</td>
+        </ng-container>
+        <ng-container matColumnDef="description">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Description</th>
+            <td mat-cell *matCellDef="let element">{{ element.description }}</td>
+          </ng-container>
+          <ng-container matColumnDef="createdTime">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Created Time</th>
+            <td mat-cell *matCellDef="let element">{{ element.createdTime | date }}</td>
+          </ng-container>
+          <ng-container matColumnDef="eventTime">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Event Time</th>
+            <td mat-cell *matCellDef="let element">{{ element.eventTime | date }}</td>
+          </ng-container>
+        <ng-container matColumnDef="operations">
+          <th mat-header-cell *matHeaderCellDef>Operations</th>
+          <td mat-cell *matCellDef="let element">
+            <button mat-icon-button color="primary" aria-label="Düzenle" class="icon-button" (click)="openUpdateEventDialog(element.id)" matTooltip="Update event">
+              <mat-icon>update</mat-icon>
+            </button>
+
+            <button mat-icon-button color="warn" aria-label="Sil" class="icon-button" (click)="openConfirmDialog(element.id)" matTooltip="Delete">
+              <mat-icon>delete</mat-icon>
+            </button>
+            
+          </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="['title','description','createdTime','eventTime', 'operations']"></tr>
+        <tr mat-row *matRowDef="let row; columns: ['title', 'description','createdTime','eventTime','operations']"></tr>
+      </table>
+    </mat-card-content>
+  </mat-card>

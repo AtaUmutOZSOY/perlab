@@ -34,6 +34,10 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { ManageAuthorsComponent } from 'src/app/admin-components/manage-authors/manage-authors.component';
 import { ManageEventsComponent } from 'src/app/admin-components/manage-events/manage-events.component';
 import { ManageAnnouncementsComponent } from 'src/app/admin-components/manage-announcements/manage-announcements.component';
+import { UpdateEventDialogComponent } from 'src/app/admin-components/dialogs/update-event-dialog/update-event-dialog.component';
+import { CreateNewEventDialogComponent } from 'src/app/admin-components/dialogs/create-new-event-dialog/create-new-event-dialog.component';
+import { ManagePublicationsComponent } from 'src/app/admin-components/manage-publications/manage-publications.component';
+import { CreateNewPublicationDialogComponent } from 'src/app/admin-components/dialogs/create-new-publication-dialog/create-new-publication-dialog.component';
 
 @NgModule({
   declarations: [
@@ -44,12 +48,17 @@ import { ManageAnnouncementsComponent } from 'src/app/admin-components/manage-an
     ManageProjectsComponent,
     ManageAnnouncementsComponent,
     ManageEventsComponent,
+    ManagePublicationsComponent,
     CreateNewCollaborationDialogComponent,
     UpdateCollaborationNameDialogComponent,
     UpdateCollaborationWebSiteDialogComponent,
     CreateNewProjectDialogComponent,  
     ConfirmDialogComponent,
     UpdateProjectDialogComponent,
+    UpdateEventDialogComponent,
+    CreateNewEventDialogComponent,
+    CreateNewPublicationDialogComponent,
+
 
   ],
   imports: [
