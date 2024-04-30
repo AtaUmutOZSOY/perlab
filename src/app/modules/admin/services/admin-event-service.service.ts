@@ -6,6 +6,7 @@ import { Event } from '../../guest/models/event';
 import { Observable } from 'rxjs';
 import { ResponseModel } from 'src/app/responses/response-model';
 import { CreateNewsFeedRequestDto } from '../dtos/create-news-feed-request-dto';
+import { UpdateEventRequestDto } from '../dtos/update-event-request-dto';
 
 @Injectable({
   providedIn: 'root'
@@ -23,9 +24,9 @@ export class AdminEventServiceService {
     let newUrl:string=this.apiUrl+'deleteEventById/'+id;
     return this.httpClient.delete<ResponseModel>(newUrl);
   }
-  updateEvent(event:Event){
+  updateEvent(updateEventRequestDto:UpdateEventRequestDto){
     let newUrl:string=this.apiUrl+'updateEvent';
-    return this.httpClient.put<ResponseModel>(newUrl,event);
+    return this.httpClient.put<ResponseModel>(newUrl,updateEventRequestDto);
   }
   createEvent(event:CreateNewsFeedRequestDto){
     let newUrl:string=this.apiUrl+'createNewEvent';
