@@ -27,7 +27,7 @@ export class ManageTeamComponent implements OnInit {
 
   }
 
-  displayedColumns:string[]=['fullNames','graduateSchoolName','researchGateUrl','linkedInUrl','orcidUrl','visualRank','operations'];
+  displayedColumns:string[]=['fullName','graduateSchoolName','researchGateUrl','linkedInUrl','orcidUrl','visualRank','operations'];
 
   getAllTeamMembers(){
     this.adminTeamService.getAllTeamMembers().subscribe(

@@ -5,6 +5,7 @@ import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { ToastrService } from 'ngx-toastr';
 import { CreateNewsFeedRequestDto } from 'src/app/modules/admin/dtos/create-news-feed-request-dto';
 import { AdminEventServiceService } from 'src/app/modules/admin/services/admin-event-service.service';
+import { NewsFeedEnums } from 'src/app/modules/guest/enums/news-feed-enums';
 import { Event } from 'src/app/modules/guest/models/event';
 
 @Component({
@@ -50,7 +51,8 @@ export class CreateNewEventDialogComponent implements OnInit {
       description :this.form.value.description,
       title:this.form.value.title,
       eventLink:this.form.value.eventLink,
-      eventTime:this.form.value.eventTime
+      eventTime:this.form.value.eventTime,
+      newsFeedType:NewsFeedEnums.event
     }
     this.adminEventService.createEvent(newEvent).subscribe(
        {
