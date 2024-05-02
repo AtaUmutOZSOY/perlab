@@ -1,47 +1,86 @@
 .flex-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Kartlar arasında düzgün bir boşluk sağlar */
-  padding: 10px; /* Dış padding kartların çevresinde boşluk bırakır */
+  justify-content: center;
+  padding: 10px;
 }
 
 .card-container {
-  flex: 0 1 300px; /* Her kart 300px genişliğinde olacak ve büyüyüp küçülebilir */
-  margin: 20px; /* Her kart arasında yeterli boşluk */
+  flex: 0 1 300px;
+  margin: 20px;
 }
 
 .custom-card {
   width: 100%;
-  max-width: 300px; /* Kartların maksimum genişliğini sınırlayın */
-  box-shadow: 0 8px 16px rgba(0,0,0,0.15); /* Daha belirgin bir gölge efekti */
-  transition: transform 0.3s ease-in-out; /* Hover durumunda animasyon ekleyin */
+  max-width: 300px;
+  border: 1px solid #ddd; /* Hafif bir sınır ekleyerek kartları belirginleştirin */
+  border-radius: 8px; /* Köşeleri yuvarlak yapın */
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .custom-card:hover {
-  transform: scale(1.05); /* Hover durumunda kartı büyüt */
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+  position: relative;
+  height: 200px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
 }
 
 .card-header img {
-  width: 100%; /* Resmin kart genişliğine uymasını sağlayın */
-  height: 200px; /* Resmin yüksekliğini sabitleyin */
-  object-fit: cover; /* Resmin boyutunu kaplayacak şekilde ayarlayın */
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
 
-mat-card-content {
-  padding: 10px;
-  text-align: center; /* İçeriği merkeze alın */
+.card-content {
+  padding: 20px;
+  text-align: center;
 }
 
-mat-card-content h3 {
-  font-size: 1.5rem; /* Başlık boyutunu büyütün */
-  color: #333; /* Başlık rengini koyulaştırın */
-  margin-top: 10px; /* Başlık üst boşluğunu ayarlayın */
+.card-content h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 5px;
 }
 
-mat-card-content p {
-  font-size: 1rem;
-  color: #666;
-  margin: 5px 0 15px; /* Paragraf boşluklarını ayarlayın */
+.card-actions {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+div.mat-card-actions button.mat-fab {
+  background-color: #2196F3;
+  color: white;
+  margin: 0 10px;
+}
+
+div.mat-card-actions button.mat-fab:hover {
+  background-color: #1976D2;
+}
+
+mat-card-actions fa-icon {
+  font-size: 1.5rem;
+}
+
+.card-header {
+  position: relative;
+  height: 200px; /* İstediğiniz boyuta göre ayarlayın */
+  width: 200px; /* Yükseklikle aynı olmalı */
+  border-radius: 50%; /* Yuvarlaklık sağlar */
+  overflow: hidden; /* Yuvarlaklık dışına taşan kısımları kırpar */
+  margin: auto; /* Merkeze alın */
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%); /* Opsiyonel */
+}
+
+.card-header img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Resmi konteynera sığdırır */
 }
 
 mat-card-actions {
@@ -49,27 +88,4 @@ mat-card-actions {
   justify-content: space-evenly; /* Butonları eşit aralıklarla ayır */
   padding-bottom: 20px;
   
-}
-
-div.mat-card-actions button.mat-fab {
-  background-color: #2196F3; /* Parlak mavi renk */
-  color: white;
-  border: none;
-  cursor: pointer;
-  box-shadow: none; /* Başlangıçta gölge yok */
-  transition: all 0.3s ease; /* Pürüzsüz geçiş efektleri */
-}
-
-div.mat-card-actions button.mat-fab:hover {
-  background-color: #1976D2; /* Hover durumunda daha koyu mavi */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Hover durumunda gölge efekti */
-}
-
-div.mat-card-actions button.mat-fab:active {
-  transform: translateY(2px); /* Aktif durumda buton hareketi */
-}
-
-
-mat-card-actions fa-icon {
-  font-size: 1.5rem; /* FontAwesome ikon boyutunu artırın */
 }

@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
 import { AdminTeamService } from 'src/app/modules/admin/services/admin-team.service';
 import { Person } from 'src/app/modules/guest/models/person';
+import { CreateNewTeamMemberDialogComponent } from '../dialogs/create-new-team-member-dialog/create-new-team-member-dialog.component';
 
 @Component({
   selector: 'app-manage-team',
@@ -10,11 +12,12 @@ import { Person } from 'src/app/modules/guest/models/person';
 })
 export class ManageTeamComponent implements OnInit {
   
+  displayedColumns:string[]=['fullName','graduateSchoolName','researchGateUrl','linkedInUrl','orcidUrl','visualRank','operations'];
 
   people: Person[] = [];
   dataSource = new MatTableDataSource<Person>();
 
-  constructor(private adminTeamService:AdminTeamService){
+  constructor(private adminTeamService:AdminTeamService,private dialog:MatDialog){
 
   }
   ngOnInit(): void {
@@ -23,11 +26,14 @@ export class ManageTeamComponent implements OnInit {
 
   openCreateTeamMemberDialog() {
 
-    throw new Error('Method not implemented.');
+    this.dialog.open(CreateNewTeamMemberDialogComponent).afterClosed().subscribe(
+      ()=>{
+        this.getAllTeamMembers();
+      }
+    );
 
   }
 
-  displayedColumns:string[]=['fullName','graduateSchoolName','researchGateUrl','linkedInUrl','orcidUrl','visualRank','operations'];
 
   getAllTeamMembers(){
     this.adminTeamService.getAllTeamMembers().subscribe(

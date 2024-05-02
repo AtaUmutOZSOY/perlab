@@ -4,12 +4,12 @@
       <div class="card-header">
         <img mat-card-image [src]="member.personImageBase64String" alt="{{ member.firstName }}">
       </div>
-      <mat-card-content>
+      <mat-card-content class="card-content">
         <h3>{{ member.firstName }} {{ member.middleName }} {{ member.lastName }}</h3>
       </mat-card-content>
-      <mat-card-actions>
-        <button mat-fab color="primary" (click)="navigateToLink(member.linkedInUrl)" target="_blank"  matTooltip="View LinkedIn">
-          <fa-icon [icon]="faLinkedin" size="sm"></fa-icon> 
+      <mat-card-actions class="card-actions">
+        <button mat-fab color="primary" (click)="navigateToLink(member.linkedInUrl)" target="_blank" matTooltip="View LinkedIn">
+          <fa-icon [icon]="faLinkedin" size="sm"></fa-icon>
         </button>
         <button mat-fab color="primary" (click)="navigateToLink(member.researchGateUrl)" target="_blank" matTooltip="View ResearchGate">
           <fa-icon [icon]="faResearchGate" size="sm"></fa-icon>

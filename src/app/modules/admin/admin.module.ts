@@ -41,6 +41,8 @@ import { CreateNewPublicationDialogComponent } from 'src/app/admin-components/di
 import { ManageTeamComponent } from 'src/app/admin-components/manage-team/manage-team.component';
 import { UpdateAnnouncementDialogComponent } from 'src/app/admin-components/dialogs/update-announcement-dialog/update-announcement-dialog.component';
 import { CreateNewAnnouncementDialogComponent } from 'src/app/admin-components/dialogs/create-new-announcement-dialog/create-new-announcement-dialog.component';
+import { CreateNewTeamMemberDialogComponent } from 'src/app/admin-components/dialogs/create-new-team-member-dialog/create-new-team-member-dialog.component';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -64,8 +66,8 @@ import { CreateNewAnnouncementDialogComponent } from 'src/app/admin-components/d
     CreateNewPublicationDialogComponent,
     UpdateAnnouncementDialogComponent,
     CreateNewAnnouncementDialogComponent,
-
-
+    CreateNewTeamMemberDialogComponent,
+    
   ],
   imports: [
     ToastrModule.forRoot({
@@ -76,6 +78,7 @@ import { CreateNewAnnouncementDialogComponent } from 'src/app/admin-components/d
       preventDuplicates: true,
       positionClass:"toast-bottom-right"
     }),
+    MatSelectModule,
     CommonModule,
     MatDialogModule,
     AdminRoutingModule,
