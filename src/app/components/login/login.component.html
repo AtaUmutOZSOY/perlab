@@ -1,23 +1,24 @@
 <div class="container">
-    <mat-card>
-      <mat-card-header>
-        <mat-card-title>Login</mat-card-title>
-      </mat-card-header>
-      <mat-card-content>
-        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-          <mat-form-field appearance="fill">
-            <mat-label>E-mail & Username</mat-label>
-            <input matInput formControlName="email" placeholder="E-mail ors username">
-          </mat-form-field>
-    
-          <mat-form-field appearance="fill">
-            <mat-label>Password</mat-label>
-            <input matInput type="password" formControlName="password" placeholder="Password">
-          </mat-form-field>
-    
-          <button mat-raised-button color="primary" type="submit" [disabled]="!loginForm.valid">Login</button>
-        </form>
-      </mat-card-content>
-    </mat-card>
-  </div>
-  
+  <!-- Hacettepe University Perlab Management Portal Logo -->
+  <img src="assets/img/hacettepe_logo_2.png" alt="Logo" width="50px" height="auto">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Hacettepe University Perlab Management Portal Login</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="fill">
+          <mat-label>E-mail & Username</mat-label>
+          <input matInput formControlName="email" placeholder="E-mail ors username">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" formControlName="password" placeholder="Password">
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" type="submit" [disabled]="!loginForm.valid">Login</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
